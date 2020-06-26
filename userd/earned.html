@@ -1,0 +1,68 @@
+<?php
+include('../functions.php');
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: login.php');
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard</title>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+  <meta name = "description" content = "Description of the page" >
+    <link rel="stylesheet" href="crestyle.css">
+    
+</head>
+
+<body>
+   <div class="wrapper">
+       <div class="sidebar">
+          <ul>
+    
+            <li><a href="Create.html">Dashboard</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">FAQS</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Logout</a></li>
+        
+       </ul>
+       </div>
+    <div class="main_content">
+        <h2 class="header1">Hurrah! You earned</h2>
+        <div class="right_nav" style="background:#444">
+          <ul>
+    
+            <li><a href="Create.html">Ongoing Campaign</a></li>
+            <li><a href="Applied.html">Applied Campaigns</a></li>
+            <li><a href="earned.html">Earned</a></li>
+            <li><a href="Engagement.html">Engagement Rate</a></li>
+        
+       </ul>
+
+        </div>
+        <div class="info">
+         <section>
+            <article class="earned_article">
+             <header class="earned_header">
+                <h1>You earned</h1>
+                </header>
+                <p><img src="rupee-indian.png" width="50px" height="37px" > </p>
+             <footer class="earned_footer"> Continue earning <a href="Create.html">Click here</a></footer>
+             </article>
+            
+            </section>
+            
+            
+        </div>
+       </div>
+    </div>
+   
+   
+</body>
+
+</html>
